@@ -1,23 +1,31 @@
 body {
-  background-color: #f9f7fe;
-  font-family: sans-serif;
+  background: url("../img/worldclock.jpg");
+  font-family: "Inter", sans-serif;
+  color: #333;
+  line-height: 1.6;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 650px;
   margin: 60px auto;
   background: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
 }
 
 .city {
   display: flex;
-  margin: 10px 0;
   justify-content: space-between;
-  padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
 .city:last-child {
@@ -26,53 +34,75 @@ body {
 
 h1 {
   text-align: center;
-  font-family: sans-serif;
-  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 30px;
 }
 
 h2 {
-  margin: 0 0 5px;
-  font-size: 28px;
+  margin: 0 0 6px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #555;
 }
 
 .date {
-  opacity: 0.7;
+  opacity: 0.6;
+  font-size: 14px;
 }
 
 .time {
-  font-size: 36px;
+  font-size: 38px;
   font-weight: bold;
-  color: #333;
+  color: #2a2a2a;
 }
 
 .time small {
-  font-size: 18px;
+  font-size: 16px;
+  opacity: 0.7;
   vertical-align: middle;
-  line-height: 36px;
 }
 
 select {
   display: block;
   width: 100%;
   font-size: 18px;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 select:hover,
 select:focus {
-  border-color: #888;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: #666;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
   outline: none;
 }
 
 footer {
   text-align: center;
-  font-size: 10px;
-  color: rgba(0, 0, 0, 0.6);
-  padding: 20px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  color: #070606;
+  padding: 10px;
+  background: rgba(85, 78, 78, 0.6);
+  max-width: 700px;
+  border-radius: 0 0 12px 12px;
+  margin: 10px auto 0;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #ffb700;
 }
